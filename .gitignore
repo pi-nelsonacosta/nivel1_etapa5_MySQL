@@ -1,0 +1,37 @@
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+
+# Archivos de log
+*.log
+
+# Archivos de configuración de la base de datos (si es necesario mantenerlos en privado)
+db.sqlite3
+
+# Configuraciones específicas del entorno
+.vscode/
+.idea/
+
+# Archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de Docker
+docker-compose.override.yml
+
+# Archivos de dependencias
+*.egg-info/
+*.egg
+
+# Archivos de compilación y distribución
+build/
+dist/
+*.egg-info/
+
+# Archivos creados por pytest
+.cache/
+*.pytest_cache/
+
+# Archivos creados por editores como Vim
+*~
+*.swp
