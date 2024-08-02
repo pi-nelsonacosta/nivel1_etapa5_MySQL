@@ -102,6 +102,9 @@ Link -- https://docs.google.com/document/d/1zMwE7s1ecL2JxNIkBabsIbCr3d-zWBfW/edi
 
 Link -- https://drive.google.com/file/d/1FqIX_DzNTfQBShO8MQzxJWlziEeCYTjo/view?usp=sharing
 
+### Acceder a la Documentación de la API
+
+ `http://localhost:8000/docs`
 
 ## Contribuciones
 
