@@ -1,4 +1,27 @@
 
+# Objetivo general
+Se requiere desarrollar una API que permita interactuar con datos de prueba y realizar peticiones GET, POST y DELETE.
+
+## Características de los datos
+Se brinda un ejemplo de la estructura de datos:
+
+### Character
+```json
+{
+    "id": 1,
+    "name": "Luke Skywalker",
+    "height": 172,
+    "mass": 77,
+    "hair_color": "blond",
+    "skin_color": "fair",
+    "eye_color": "blue",
+    "birth_year": 1998
+}
+
+```
+#### Pasos a seguir para ejecutar esta API
+
+
 1. Clona el repositorio:
 
 ```sh
@@ -49,23 +72,35 @@ La API estará disponible en `http://localhost:8000`.
 
 ## Endpoints
 
-Algunos de los endpoints disponibles son:
+Endpoints disponibles para Gestión de Usuario son:
 
-- **`GET /items`**: Obtiene todos los ítems.
-- **`POST /items`**: Crea un nuevo ítem.
-- **`GET /items/{item_id}`**: Obtiene un ítem específico.
-- **`PUT /items/{item_id}`**: Actualiza un ítem específico.
-- **`DELETE /items/{item_id}`**: Elimina un ítem específico.
+- **`POST /user/register`**: Registrar un usuario.
+- **`POST /user/token`**: Obtener un token de acceso.
+- **`GET /user/me`**: Obtiene datos del usuario autenticado.
 
-## Configuración
+Endppints disponibles para Gestión de Characters (Personajes) son:
+
+- **`GET /character/getAll`**: Lista de Personajes.
+- **`GET /character/get/{id}`**: Listamos las caracteristicas de un personaje en particular.
+- **`POST /character/add`**: Agregamos un character (personaje).
+- **`DELETE /character/delete/{id}`**: Eliminamos un character (personaje).
+
+Acceso a todos los endpoint (Listado)
+
+- **`GET /docs/all-routes`**: Listado de Endpoints.
 
 ### Variables de Entorno
 
 - **`MONGODB_URL`**: URL de conexión a la base de datos MongoDB.
 
-### Configuración de Seguridad
+### Enlace a Documentación del Proyecto (Enlace de Google Drive para descargar)
 
-La seguridad de la API puede configurarse utilizando JWT (JSON Web Tokens) u otros métodos de autenticación definidos en `core/security.py`.
+Link -- https://docs.google.com/document/d/1zMwE7s1ecL2JxNIkBabsIbCr3d-zWBfW/edit?usp=sharing&ouid=108611500655874932378&rtpof=true&sd=true
+
+### Enlace a Testing con Postman (Enlae a Google Drive para descargar)
+
+Link -- https://drive.google.com/file/d/1FqIX_DzNTfQBShO8MQzxJWlziEeCYTjo/view?usp=sharing
+
 
 ## Contribuciones
 
