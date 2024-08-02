@@ -61,11 +61,12 @@ docker-compose up -d
 
 ## Ejecución de la Aplicación
 
-1. Asegúrate de que MongoDB esté corriendo.
+1. Asegúrate de que Docker este inicializado
 2. Ejecuta la aplicación:
 
 ```sh
-uvicorn app.main:app --reload
+docker-compose down
+docker-compose up --build
 ```
 
 La API estará disponible en `http://localhost:8000`.
