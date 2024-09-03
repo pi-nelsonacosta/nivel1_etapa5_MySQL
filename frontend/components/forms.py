@@ -6,7 +6,7 @@ def login_form():
         Input(id='username', placeholder='Username'),
         Input(id='password', type='password', placeholder='Password'),
         Button('Login', type='submit'),
-        action='/login', method='post'
+        action='/user/token', method='post'
     )
 
 def character_form():
