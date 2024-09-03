@@ -11,4 +11,9 @@ pytest-cov>=3.0.0
 uvicorn
 email-validator
 python-multipart
+azure-ai-textanalytics
+openai>=1.0.0
+
+
+
 

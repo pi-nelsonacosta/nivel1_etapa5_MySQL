@@ -1,13 +1,18 @@
 version: '3.10'
 
 services:
-  mongo:
-    image: mongo:latest
-    container_name: mongo
+  cosmosdb_emulator:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:mongodb
+    container_name: cosmosdb_emulator
     ports:
+      - "10250:10250"
+      - "10251:10251"
       - "27017:27017"
+    environment:
+      AZURE_COSMOS_EMULATOR_PARTITION_COUNT: 2
+      AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE: "true"
     volumes:
-      - mongo_data:/data/db
+      - cosmosdb_data:/data/cosmosdb
 
   api:
     build:
@@ -20,11 +25,11 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - mongo
+      - cosmosdb_emulator
     environment:
-      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_URI=mongodb://cosmosdb_emulator:27017
       - MONGO_DB=mydatabase
       - PYTHONPATH=/app
 
 volumes:
-  mongo_data:
+  cosmosdb_data:

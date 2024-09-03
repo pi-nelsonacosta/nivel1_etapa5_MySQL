@@ -8,6 +8,7 @@ class CharacterModel(BaseModel):
     skin_color: str
     eye_color: str
     birth_year: int
+    eye_color: str  # O ObjectId, dependiendo de cómo lo manejes
 
     @validator('*')
     def no_empty_fields(cls, v):
